@@ -1,0 +1,9 @@
+tmp/
+build/
+.debhelper/
+dataplane-flowstat-plugin/
+libdataplane-flowstat-plugin-proto-support/
+files
+*.log
+*.substvars
+
