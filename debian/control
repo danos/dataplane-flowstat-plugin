@@ -1,0 +1,36 @@
+Source: dataplane-flowstat-plugin
+Section: contrib/net
+Priority: optional
+Maintainer: Dung Man <dung@fosec.vn>
+Build-Depends: meson,
+               check <!nocheck>,
+               debhelper (>= 9.20160709),
+               dh-exec,
+               libczmq-dev,
+               libdpdk-dev (>= 19.11.4-0vyatta7),
+               libgoogle-protocolbuffers-perl,
+               libprotobuf-c-dev,
+               liburcu-dev (>= 0.8.0),
+               pkg-config,
+               protobuf-c-compiler,
+               python3,
+               vyatta-dataplane-dev,
+               vyatta-dataplane-test
+Standards-Version: 4.3.0
+Homepage:
+
+Package: dataplane-flowstat-plugin
+Section: contrib/net
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Vyatta dataplane flow stat plugin library.
+ A pipeline plugin for Vyatta dataplane that view
+ flow statistics.
+
+Package: libdataplane-flowstat-plugin-proto-support
+Section: contrib/net
+Architecture: all
+Depends: ${misc:Depends}
+Description: Vyatta dataplane flowstat plugin protocol buffer files and support
+ Set of files defining message formats accepted by the dataplane
